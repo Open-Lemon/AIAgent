@@ -1,0 +1,10 @@
+json5
+libentry
+pydantic
+libdata
+httpx
+openai
+Jinja2
+rich
+PyYAML
+agent_types

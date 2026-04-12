@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "amap-maps": {
+      "url": "https://mcp.amap.com/",
+      "endpoint": "sse?key={your-key}",
+      "type": "alimap",
+      "enabled": true
+    }
+  }
+}
+

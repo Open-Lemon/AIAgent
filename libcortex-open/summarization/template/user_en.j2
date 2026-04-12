@@ -1,0 +1,35 @@
+# OriginalQuery
+{{query}}
+
+# UserIntent
+{% if intent %}
+    {{- intent }}
+{% else %}
+    {{- "Not specified" }}
+{% endif %}
+
+# Observations
+{% if observations %}
+    {%- for o in observations %}
+        {%- if o.calling %}
+            {{- "## ToolCalling: " }}{{o.calling}}{{"\n"}}
+            {{- "### Result\n" + o.result + "\n" }}
+            {{- "### SummaryConstraints\n" }}
+            {%- if o.summary_constraints %}
+                {%- for c in o.summary_constraints %}
+                    {{- c + "\n"}}
+                {%- endfor %}
+            {%- else %}
+                {{- "None\n" }}
+            {%- endif %}
+        {%- else %}
+            {{- "## Conclusion\n" + o.result + "\n" }}
+        {%- endif %}
+        {{- "\n\n" }}
+    {%- endfor %}
+{% else %}
+    {{- "No tool calls made" }}
+{% endif %}
+
+Please refer to the content under [Observations](#Observations) and extract only the information relevant to the user's original request in [Original Query](#OriginalQuery) to produce a summarized response.
+Respond strictly in accordance with the requirements listed under [Summary Constraints](#SummaryConstraints).

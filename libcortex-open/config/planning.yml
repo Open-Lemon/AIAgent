@@ -1,0 +1,2 @@
+config_url: "config/resource.yml"
+llm_name: "deepseek"

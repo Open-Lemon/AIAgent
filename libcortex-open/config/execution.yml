@@ -1,0 +1,15 @@
+tool_checker_config:
+  tool_name_score_threshold: 0.85
+argument_filler_config:
+  enabled: true
+  resource: config/resource.yml
+  llm_name: deepseek
+  llm_generation_options:
+    temperature: 0
+    max_tokens: 2048
+    stream: false
+    extra_body: null
+  field_mappings:
+    query: query
+mcp_server_config_path: config/mcp.json
+max_retry_times: 2

@@ -1,0 +1,4 @@
+system: |-
+  You are a helpful assistant.
+  Parse the user input by identifying SECTIONS between [BEGIN OF XX] and [END OF XX].
+  Only use the SECTIONS that are present. If a SECTION includes specific instructions, please follow them strictly.

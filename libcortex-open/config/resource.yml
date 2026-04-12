@@ -1,0 +1,5 @@
+deepseek:
+  base_url: "{your-url}"
+  api_key: "{your-key}"
+  model: "deepseek-v3"
+mongodb: "mongodb://root:{your-password}@localhost:27017/agent"

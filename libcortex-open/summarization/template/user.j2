@@ -1,0 +1,35 @@
+# OriginalQuery
+{{query}}
+
+# UserIntent
+{% if intent %}
+    {{- intent }}
+{% else %}
+    {{- "未指定" }}
+{% endif %}
+
+# Observations
+{% if observations %}
+    {%- for o in observations %}
+        {%- if o.calling %}
+            {{- "## ToolCalling: " }}{{o.calling}}{{"\n"}}
+            {{- "### Result\n" + o.result + "\n" }}
+            {{- "### SummaryConstraints\n" }}
+            {%- if o.summary_constraints %}
+                {%- for c in o.summary_constraints %}
+                    {{- c + "\n"}}
+                {%- endfor %}
+            {%- else %}
+                {{- "无\n" }}
+            {%- endif %}
+        {%- else %}
+            {{- "## Conclusion\n" + o.result + "\n" }}
+        {%- endif %}
+        {{- "\n\n" }}
+    {%- endfor %}
+{% else %}
+    {{- "没有任何工具调用" }}
+{% endif %}
+
+请参考[Observations](#Observations)中的内容，只提取和[Original Query](#OriginalQuery)中用户原始需求相关的信息，进行总结回复。
+严格按照[Summary Constraints](#SummaryConstraints)的要求进行回复。

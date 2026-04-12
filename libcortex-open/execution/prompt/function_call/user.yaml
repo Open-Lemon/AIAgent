@@ -1,0 +1,63 @@
+# 任务指令
+task: |-
+  [BEGIN OF TASK]
+  You need to complete the tool invocation task based on the provided sections of tool, the user query, and the conversation history.
+  If RULES section is present, complete the task as instructed by the rules.
+  If MEMORY section is present, treat them as supplementary information.
+  [END OF TASK]
+
+# 工具信息
+tools: |-
+  [BEGIN OF TOOLS]
+  {tool_schema}
+  [END OF TOOLS]
+
+# 输出格式
+output_format: |-
+  [BEGIN OF OUTPUT FORMAT]
+  The output MUST strictly adhere to the following JSON format, and NO other text MUST be included.
+  The example format is as follows. Please make sure tool name and parameter type is correct.
+  Note: 
+    If no tool is needed, please directly output an empty list '[]'.
+    If the invoked tool has no parameters, return its arguments as an empty dictionary.
+  ```json
+  [
+      {
+          "name": "tool_name1",
+          "arguments": {
+              "argument1": "value1",
+              "argument2": "value2"
+              ...
+          }
+      },
+      ...(additional parallel tool calls as needed)
+  ]
+  ```
+  [END OF OUTPUT FORMAT]
+
+# 强规则指引
+rules: |-
+  [BEGIN OF RULES]
+  {rules}
+  [END OF RULES]
+
+# memory信息
+memory: |-
+  [BEGIN OF MEMORY]
+  {memory_dict}
+  [END OF MEMORY]
+
+# 对话历史中的一些指令
+history: |-
+  [BEGIN OF CONVERSATION HISTORY]
+  Below is the conversation history, presented as a list of dialogue turns in chronological order.
+  Each entry contains a "role" (e.g., user or assistant) and the corresponding "content."
+  Note: in some cases, may include turns from only a single role.
+  {history_list}
+  [END OF CONVERSATION HISTORY]
+
+# 用户输入信息
+query: |-
+  [BEGIN OF USER QUERY]
+  {query_dict}
+  [END OF USER QUERY]

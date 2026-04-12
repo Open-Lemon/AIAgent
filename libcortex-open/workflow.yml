@@ -1,0 +1,5 @@
+planning_url: "http://localhost:10000"
+execution_url: "http://localhost:15000"
+session_memory_url: "http://localhost:20000"
+summarization_url: "http://localhost:25000"
+max_iterations: 10
