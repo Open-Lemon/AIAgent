@@ -1,6 +1,6 @@
 # 智能体：理论基础与应用实践
 该仓库为书籍《智能体：理论基础与应用实践》的配套开源仓库，主要包含1000+学术论文（基于智能体的框架、记忆、RAG、规划、行动、评估等核心模块分类汇总）以及相关代码（涵盖书中给出的代码示例以及有代表性的业界优秀开源代码链接参考），力求构建最全、最新、最准的智能体开源仓库，期待大家一起来建设该开源仓库。
-![004b320320472489](https://github.com/user-attachments/assets/4449bbb4-44ac-4114-a3bb-086d6c8b833c#width=300)
+![004b320320472489](https://github.com/user-attachments/assets/4449bbb4-44ac-4114-a3bb-086d6c8b833c#width=100)
 
 ![004b320320a635ca](https://github.com/user-attachments/assets/838e985b-53e2-4425-8dbc-6eca780f0b3e)
 
