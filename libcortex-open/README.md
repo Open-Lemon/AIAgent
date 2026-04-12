@@ -1,4 +1,4 @@
-# 基于 DeepSeek 的智能体开发实践
+# DeepSeek 智能体开发实践
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
